@@ -1,0 +1,431 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0px;
+}
+.a {
+  height: 20px;
+  position: relative;
+}
+div {
+  margin: 0 auto;
+  padding: 0;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-roof {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid lightgray;
+  z-index: 1;
+  min-width: 1200px;
+}
+.page-rooffix {
+  position: fixed;
+  /* width: 100%;
+  height: 100px; */
+  background-color: white;
+}
+
+.page-left {
+  margin: 0 auto;
+  width: 150px;
+  height: 30px;
+  float: left;
+  padding-left: 40px;
+}
+
+.logo1 {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  display: inline-block;
+}
+.logo1fix {
+  display: none;
+}
+
+.logo2 {
+  width: 120px;
+  height: 40px;
+  /* visibility: hidden; */
+  display: none;
+}
+.logo2fix {
+  display: inline-block;
+}
+.page-center {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+  display: inline-block;
+  width: 600px;
+  height: 20px;
+  text-align: center;
+  margin: 0;
+  /* display: inline; */
+}
+.nav {
+  margin: 0;
+  padding-top: 5px;
+}
+.list {
+  display: inline;
+  margin-right: 25px;
+}
+.listString {
+  text-decoration: none;
+  color: white;
+  vertical-align: middle;
+}
+.listStringfix {
+  color: black;
+}
+
+.page-right {
+  display: inline-block;
+  width: 300px;
+  height: 20px;
+  position: absolute;
+  top: 40px;
+  left: 1200px;
+}
+.pagerightmenu {
+  position: relative;
+}
+.search {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  background: none;
+  border-bottom: 5px solid white;
+  outline: none;
+  color: white;
+  outline: none;
+}
+
+.searchfix {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0;
+  border-bottom: 5px solid black;
+  background-color: white;
+  outline: none;
+  color: black;
+}
+
+.pagerightmenu > a > img {
+  width: 30px;
+  height: 30px;
+  /* position: absolute;
+  top : 25px;
+  left : 850px;  */
+}
+.whitelogin {
+  position: absolute;
+  top: -5px;
+  left: 250px;
+  display: inline-block;
+
+  /* left: 1015px; */
+}
+.whiteloginfix {
+  display: none;
+}
+.blacklogin {
+  position: absolute;
+  top: -5px;
+  left: 250px;
+  display: none;
+}
+.blackloginfix {
+  display: inline-block;
+}
+
+.whitesea {
+  position: absolute;
+  top: -5px;
+  left: 200px;
+  /* left: 1050px; */
+}
+.whiteseafix {
+  display: none;
+}
+.blacksea {
+  position: absolute;
+  top: -5px;
+  left: 200px;
+  display: none;
+}
+.blackseafix {
+  display: inline-block;
+}
+
+.totalcon {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+p {
+  font-weight: bold;
+}
+td {
+  border-bottom: 1px solid gray;
+}
+#main {
+  text-align: center;
+  padding-top: 100px;
+}
+/* 고객센터 구역 */
+#leftBox {
+  padding-left: 50px;
+  float: left;
+  margin-top: 50px;
+}
+#leftBox > #telephone {
+  font-size: 50px;
+}
+#leftBox > h3 {
+  display: inline-block;
+  padding-left: 10px;
+  border-bottom: 3px solid orange;
+}
+/* 1:1문의 구역 */
+#rightBox {
+  display: inline-block;
+  margin-top: 50px;
+  padding-left: 100px;
+}
+#rightBox > #pen {
+  font-size: 50px;
+}
+#rightBox > h3 {
+  display: inline-block;
+  padding-left: 10px;
+  border-bottom: 3px solid orange;
+}
+/* 문의하기 */
+#ask {
+  cursor: pointer;
+  border: 1px solid orange;
+  color: orange;
+  font-weight: bold;
+  margin-left: 10px;
+}
+/* 고객센터, 문의를 담고 있는 박스 */
+#sBox {
+  background-color: rgb(233, 233, 233);
+  width: 1100px;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+/* 예매방법, 수수료 등 박스 */
+#list {
+  margin: auto;
+  width: 1400px;
+}
+#list > a {
+  border: 1px solid gray;
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: black;
+}
+#list > a:hover {
+  color: white;
+  font-weight: bold;
+  background-color: orangered;
+}
+/* 예매방법 */
+#read {
+  margin: auto;
+  width: 1000px;
+}
+.ticketing {
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  padding-top: 100px;
+  padding-right: 40px;
+}
+.ticketing > span {
+  font-size: 50px;
+}
+hr {
+  padding-top: 20;
+  width: 1100px;
+}
+#readMain {
+  margin: auto;
+  width: 1400px;
+}
+#readMain > h1 {
+  padding-top: 50px;
+}
+#readMain > div {
+  padding: 50px;
+}
+/* 수수료 구역 */
+#charge > h1 {
+  float: left;
+  padding-left: 20%;
+  padding-top: 80px;
+}
+#tableHead {
+  background-color: pink;
+}
+#firstBox {
+  width: 800px;
+  height: 300px;
+  margin: auto;
+  padding-left: 200px;
+  padding-top: 100px;
+}
+#firstBox > table {
+  width: 800px;
+  text-align: center;
+  height: 100px;
+  margin: auto;
+}
+#charge2 > h1 {
+  float: left;
+  padding-left: 20%;
+  padding-top: 80px;
+}
+#secondBox {
+  width: 800px;
+  height: 450px;
+  margin: auto;
+  padding-left: 200px;
+  padding-top: 50px;
+}
+#secondtBox > hr {
+  width: 800px;
+}
+#secondBox > table {
+  width: 1000px;
+  text-align: center;
+  height: 100px;
+  margin: auto;
+}
+#charge3 > h1 {
+  float: left;
+  padding-left: 20%;
+  padding-top: 80px;
+  /* bottom: 250px; */
+}
+#thirdBox {
+  width: 800px;
+  height: 100px;
+  margin: auto;
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-bottom: 200px;
+}
+/* 디스플레이 설정 (js 연동) */
+#readMain {
+  display: none;
+}
+#charge {
+  display: none;
+}
+#ticket {
+  display: none;
+  margin: auto;
+}
+/* 티켓수령 구역 */
+#ticketBox {
+  padding: 50px;
+  /* margin: auto; */
+}
+#ticketBox > h1 {
+  padding-bottom: 10px;
+}
+#ticketBox > p {
+  text-align: center;
+}
+/* 티켓판매 구역 */
+#ticketSale {
+  display: none;
+}
+.salebox {
+  margin: auto;
+  background-color: rgb(255, 233, 237);
+  width: 1300px;
+  padding-bottom: 20px;
+  margin-top: 100px;
+}
+.salebox > #saleFirst {
+  width: 250px;
+  margin-left: 30px;
+}
+.salebox > #saleFirst > h1 {
+  border-bottom: 3px solid orange;
+  text-align: left;
+  padding-top: 15px;
+  font-size: 30px;
+}
+.salebox > ul {
+  padding-left: 50px;
+}
+.salebox > ul > li {
+  text-align: left;
+  list-style-type: circle;
+  padding-bottom: 7px;
+
+  font-size: 13px;
+}
+.salebox > #saleSecond {
+  width: 210px;
+  margin-left: 30px;
+}
+.salebox > #saleSecond > h1 {
+  border-bottom: 3px solid orange;
+  text-align: left;
+  padding-top: 15px;
+  font-size: 30px;
+}
+.salebox > #saleThird {
+  width: 170px;
+  margin-left: 30px;
+}
+.salebox > #saleThird > h1 {
+  border-bottom: 3px solid orange;
+  text-align: left;
+  padding-top: 15px;
+  font-size: 30px;
+}
+.salebox > #saleForth {
+  width: 70px;
+  margin-left: 30px;
+}
+.salebox > #saleForth > h1 {
+  border-bottom: 3px solid orange;
+  text-align: left;
+  padding-top: 15px;
+  font-size: 30px;
+}
+#saleBox4 {
+  margin-bottom: 100px;
+}

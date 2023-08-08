@@ -1,0 +1,77 @@
+2023-06-27
+dbname: springproject
+id: springuser
+pw: mysql
+
+create table product(
+pno int auto_increment,
+type_a varchar(100) not null,
+pname varchar(100) not null,
+price int not null,
+content text,
+primary key(pno));
+
+2023-06-28
+create table customer(
+cid varchar(100) not null,
+cname varchar(10) not null,
+cpw varchar(100) not null,
+cage int not null,
+cgender varchar(5) not null,
+cnick_name varchar(10) not null,
+cemail varchar(50) not null,
+ctel int not null,
+cadd varchar(100) not null,
+cdate datetime default now(),
+primary key(cid));
+
+create table file(
+uuid varchar(256) not null,
+save_dir varchar(256) not null,
+file_name varchar(256) not null,
+file_type tinyint(1) default 0,
+file_size int,
+pno int,
+fileCategoryNum int default 0,
+primary key(uuid));
+
+create table consult(
+csno int auto_increment not null,
+csid varchar(100),
+cscontent text,
+csdate datetime default current_timestamp,
+cstype varchar(100),
+csname varchar(100),
+cstel varchar(100),
+primary key(csno));
+
+CREATE TABLE admin_calendarevent(
+  event_num int NOT NULL AUTO_INCREMENT,
+  date date NOT NULL,
+  time time NOT NULL,
+  request_term text,
+  cid varchar(100),
+  status varchar(50),
+  admin_confirmation tinyint(1) DEFAULT 0,
+  type_a varchar(100),
+  pno int,
+  admin_comments text,
+  PRIMARY KEY(event_num),
+  FOREIGN KEY(cid) REFERENCES customer(cid),
+  FOREIGN KEY(pno) REFERENCES product(pno)
+);
+
+CREATE TABLE calendarevent(
+  event_num int NOT NULL AUTO_INCREMENT,
+  date date NOT NULL,
+  time time NOT NULL,
+  request_term text,
+  cid varchar(100),
+  status varchar(50),
+  admin_confirmation tinyint(1) DEFAULT 0,
+  type_a varchar(100),
+  pno int,
+  PRIMARY KEY(event_num),
+  FOREIGN KEY(cid) REFERENCES customer(cid),
+  FOREIGN KEY(pno) REFERENCES product(pno)
+);
